@@ -57,7 +57,7 @@
                 <h1 class="announcement__title">Новое объявление</h1>
                 <ul class="announcement__progress progress">
                     <li class="progress__item progress__item--active" data-value="section-1">Основные данные</li>
-                    <li class="progress__item progress__item" data-value="section-2">Удобства и условия/li>
+                    <li class="progress__item progress__item" data-value="section-2">Удобства и условия</li>
                     <li class="progress__item progress__item" data-value="section-3">Цена</li>
                     <li class="progress__item progress__item" data-value="section-4">Тарифы</li>
                     <li class="progress__item progress__item" data-value="section-5">Оплата</li>
@@ -66,6 +66,13 @@
                     <form class="announcement-form" action="#" method="post">
                         <fieldset>
                             <legend>Контакты</legend>
+                            <div>
+                                <p>Сдает квартиру</p>
+                                <input type="radio" id="owner" name="owner" value="owner" checked>
+                                <label for="owner">Собственник</label>
+                                <input type="radio" id="agent" name="agent" value="agent">
+                                <label for="agent">Агент</label>
+                            </div>
                         </fieldset>
                     </form>
                 </section>
@@ -74,7 +81,7 @@
         <footer class="page__footer page-footer">
             <div class="page-footer__row">
                 <a class="page-footer__link" href="#">ООО "Хауз" © 2021 Все права защищены</a>
-                <a class="page-footer__confidential">Политика конфиденциальности</a>
+                <a class="page-footer__confidential" href="#">Политика конфиденциальности</a>
             </div>
         </footer>
     </body>    
