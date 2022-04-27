@@ -64,16 +64,69 @@
                 </ul>
                 <section class="announcement__section announcement__section--active" id="section-1">
                     <form class="announcement-form" action="#" method="post">
-                        <fieldset>
-                            <legend>Контакты</legend>
-                            <div>
-                                <p>Сдает квартиру</p>
-                                <input type="radio" id="owner" name="owner" value="owner" checked>
-                                <label for="owner">Собственник</label>
-                                <input type="radio" id="agent" name="agent" value="agent">
-                                <label for="agent">Агент</label>
+                        <fieldset class="announcement-form__section">
+                            <legend class="announcement-form__title">Контакты</legend>
+                            <p class="announcement-form__radio radio radio__title">Сдает квартиру</p>
+                            <label class="radio-button" for="owner">
+                                <input class="visually-hidden" type="radio" id="owner" name="owner" value="owner" checked>
+                                <span class="radio-button__label">Собственник</span>
+                            </label>
+                            <label class="radio-button" for="agent">
+                                <input class="visually-hidden" type="radio" id="agent" name="agent" value="agent">
+                                <span class="radio-button__label">Агент</span>
+                            </label><br>
+                            <label class="announcment-form__field announcment-form__field--required">
+                                <span class="announcment-form__field-label">Имя *</span><br>
+                                <input class="announcment-form__field-control input" type="text" name="announcment-form-name" id="announcment-form-name" placeholder="Введите ваше имя">
+                            </label><br>
+                            <label class="announcment-form__field announcment-form__field--required">
+                                <span class="announcment-form__field-label">Подтвердите мобильный телефон *</span><br>
+                                <input class="announcment-form__field-control input" type="tel" name="announcment-form-tel" id="announcment-form-tel" placeholder="+7 (___) ___-__-__">
+                            </label> 
+                        </fieldset>
+                        <fieldset class="announcement-form__section">
+                            <legend class="announcement-form__title">Объект</legend>
+                            <p class="announcement-form__radio radio radio__title">Тип жилья</p>
+                            <label class="radio-button" for="flat">
+                                <input class="visually-hidden" type="radio" id="flat" name="flat" value="flat" checked>
+                                <span class="radio-button__label">Квартира</span>
+                            </label>
+                            <label class="radio-button" for="appartments">
+                                <input class="visually-hidden" type="radio" id="appartments" name="appartments" value="appartments">
+                                <span class="radio-button__label">Апартаменты</span>
+                            </label>
+                            <label class="radio-button" for="house">
+                                <input class="visually-hidden" type="radio" id="house" name="house" value="house">
+                                <span class="radio-button__label">Дом</span>
+                            </label><br>
+                            <label class="announcment-form__field announcment-form__field--required">
+                                <span class="announcment-form__field-label">Адрес *</span><br>
+                                <input class="announcment-form__field-control input" type="address" name="announcment-form-address" id="announcment-form-address" placeholder="Укажите город, улицу, дом и квартиру">
+                            </label><br>
+                            <label class="announcment-form__field">
+                                <span class="announcment-form__field-label">Количество комнат</span><br>
+                                <select class="announcment-form__field-control select" name="rooms" id="rooms">
+                                    <option>1</option>
+                                </select>
+                            </label><br>
+                            <label class="announcment-form__field">
+                                <span class="announcment-form__field-label">Общая площадь</span><br> 
+                                <input class="announcment-form__field-control input" type="number" name="announcment-form-area" id="announcment-form-area" placeholder="м2">
+                            </label>
+                        </fieldset>
+                        <fieldset class="announcement-form__section">
+                            <legend class="announcement-form__title">Фото</legend>
+                            <p class="announcement-form__description">Загрузите фотографии всех комнат. Не допускаются к размещению фотографии с водяными знаками, чужих объектов и рекламные баннеры. JPG, PNG или GIF. Максимальный размер файла 10 мб</p>
+                            <div class="announcement-form__img-area">
+                                <label class="announcment-form__field">
+                                    <span class="announcment-form__field-label">Для загрузки перетащите файл сюда</span><br>
+                                    <input class="announcment-form__field-control img id="file-input" type="file" name="file" multiple>
+                                </label>
                             </div>
                         </fieldset>
+                        <div class="announcement-form__controls">
+                            <button class="announcement-form__button button button--primary" type="submit" data-target="section-2">Далее</button>
+                        </div>
                     </form>
                 </section>
             </section>
